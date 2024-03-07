@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-function App() {
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+
+import './styles.css';
+
+// import required modules
+import { EffectCards } from 'swiper/modules';
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Swiper
+        effect={'cards'}
+        grabCursor={true}
+        modules={[EffectCards]}
+        className="mySwiper"
+      >
+      <SwiperSlide>
+      <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+    </SwiperSlide>
+      </Swiper>
+    </>
   );
 }
 
-export default App;
